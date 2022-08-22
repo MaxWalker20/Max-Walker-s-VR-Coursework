@@ -35,7 +35,7 @@ Simply run the built version using Unity. This version is not fully functional i
 - An oscilloscope version is entirely possible by including Diophantine equations - even by maping them in 3D or by flattening the tails of such equations on the 3D map to 2D.
 - 
 ### Known Bugs
-- Due to issues with resolving static classes, the front end User Interface is currently non functional. 
+- Due to issues with resolving static classes, the front-end User Interface is currently non functional. 
 
 ### Coding Credit
 - A significant portion of the `Graph.cs` and `FunctionSelector.cs` files, as well as certain Unity settings relating to the startup, have been very closely followed from the public domain blog Catlikecoding.com, run by Jasper Flick. I give full credit for those resources therein.
