@@ -6,11 +6,11 @@ public static class FunctionSelector {
 
 	public delegate Vector3 Function (float u, float v, float t);
 
-	public static Vector3 MultiWave (float x, float t) {
+	public static Vector3 MultiWave (float x, float t, float r1, float r2) {
 		Vector3 p;
 		p.x = x;
-		p.y = Sin(PI * (x + 0.5f * t));
-
+		p.y = Sin(r1* PI * (x + 0.5f * t));
+		p.y += 0.5f * Sin(r2 * PI * (x + t));
 		p.z = 0;
 		return p;
 	}

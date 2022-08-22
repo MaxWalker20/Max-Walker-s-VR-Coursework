@@ -30,7 +30,7 @@ public class Graph : MonoBehaviour {
 				x = 0;
 			}
 			float u = (x + 0.5f) * step - 1f;
-			points[i].localPosition = FunctionSelector.MultiWave(u, time);
+			points[i].localPosition = FunctionSelector.MultiWave(u, time, 1f, 2f);
 		}
 	}
 }
