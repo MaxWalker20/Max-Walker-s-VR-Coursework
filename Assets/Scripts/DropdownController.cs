@@ -21,11 +21,11 @@ public class DropdownController : MonoBehaviour
     {
       Debug.Log("function called");
       float[] ratio = {0f, 0f};
-      ratio = ratioDecider(m_Dropdown, ratio);
+      ratio = ratioDecider(change, ratio);
       Debug.Log(ratio[0] + " and " + ratio[1]);
-      Graph graph = new Graph();
-      graph.ratioNumerator = ratio[0];
-      graph.ratioDenominator = ratio[1];
+      // Graph graph = new Graph();
+      // graph.ratioNumerator = ratio[0];
+      // graph.ratioDenominator = ratio[1];
     }
 
     float[] ratioDecider(Dropdown change, float[] ratio){
