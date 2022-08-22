@@ -24,7 +24,7 @@ https://user-images.githubusercontent.com/101332382/185896999-524bb370-4177-429d
 
 ### How to run it
 
-Simply run the built version using Unity. This version is not fully functional in terms of user interactability.
+Simply run the built version inside the Build folder, using Unity. This version is not fully functional in terms of user interactability.
 
 ### Future Features
 - By adding a slider from 0 to 1, a decimal fraction can be obtained. This would give a considerably more smooth continuum of the sine function instead of entering the numbers for the ratios.
