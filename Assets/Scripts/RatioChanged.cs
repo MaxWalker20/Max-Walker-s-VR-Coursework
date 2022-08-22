@@ -1,39 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class DropdownController : MonoBehaviour
+public class NewBehaviourScript : ScriptableObject
 {
-    Dropdown m_Dropdown;
 
-    void Start()
-    {
-        Debug.Log("dropdown started");
-        //Fetch the Dropdown GameObject
-        m_Dropdown = GetComponent<Dropdown>();
-        //Add listener for when the value of the Dropdown changes, to take action
-        m_Dropdown.onValueChanged.AddListener(delegate {
-          Debug.Log("dropdown change detected");
-          DropdownValueChanged(m_Dropdown);
-        });
-    }
 
-    void DropdownValueChanged(Dropdown change)
+    void RatioChanged(int dropdownChange)
     {
       Debug.Log("function called");
       float[] ratio = {0f, 0f};
-      ratio = ratioDecider(m_Dropdown, ratio);
+      ratio = RatioDecider(dropdownChange, ratio);
       Debug.Log(ratio[0] + " and " + ratio[1]);
-      Graph graph = new Graph();
-      graph.ratioNumerator = ratio[0];
-      graph.ratioDenominator = ratio[1];
+      // Graph graph = new Graph();
+      Graph.ratioNumerator = ratio[0];
+      Graph.ratioDenominator = ratio[1];
     }
 
-    float[] ratioDecider(Dropdown change, float[] ratio){
-      Debug.Log(change.value);
+    float[] RatioDecider(int change, float[] ratio){
+      Debug.Log(change);
       ratio[0] = 0f;
       ratio[1] = 1f;
       //https://en.wikipedia.org/wiki/Interval_(music)#Size_of_intervals_used_in_different_tuning_systems
-      switch((int)change.value)
+      switch(change)
       {
         case 0:
           ratio[0] = 0f;

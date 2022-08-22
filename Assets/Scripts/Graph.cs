@@ -38,4 +38,6 @@ public class Graph : MonoBehaviour {
 			points[i].localPosition = FunctionSelector.MultiWave(u, time, ratioNumerator, ratioDenominator);
 		}
 	}
+
+
 }
